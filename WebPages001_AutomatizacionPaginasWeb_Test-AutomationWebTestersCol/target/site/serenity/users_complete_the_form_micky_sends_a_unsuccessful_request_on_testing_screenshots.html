@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/chartjs-plugin-doughnutlabel.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="feature_users_complete_the_form.html">Users Complete The Form</a></span>
+                > <span class="truncate-60"><a
+                    href="users_complete_the_form_micky_sends_a_unsuccessful_request_on_testing.html">Micky sends a unsuccessful request on Testing </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 15-02-2022 15:55</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Users Complete The Form </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="tag_unsuccessfulform.html">Unsuccessful Form
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Micky sends a unsuccessful request on Testing
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0930f42dd36c4fd27a0040d798ab57eecb62bf6cc6e89c108ba6b7e81b2ebd2a.png" title=" Given Mickey is on the Aquabot home page" width="1366"/>
+                <img src="0930f42dd36c4fd27a0040d798ab57eecb62bf6cc6e89c108ba6b7e81b2ebd2a.png" title=" Mickey navigate web page" width="1366"/>
+                <img src="0930f42dd36c4fd27a0040d798ab57eecb62bf6cc6e89c108ba6b7e81b2ebd2a.png" title=" Mickey opens the https://aquabottesting.com/index.html" width="1366"/>
+                <img src="0930f42dd36c4fd27a0040d798ab57eecb62bf6cc6e89c108ba6b7e81b2ebd2a.png" title=" Mickey navigate web page (completed)" width="1366"/>
+                <img src="0930f42dd36c4fd27a0040d798ab57eecb62bf6cc6e89c108ba6b7e81b2ebd2a.png" title=" Given Mickey is on the Aquabot home page (completed)" width="1366"/>
+                <img src="90e45bdc2c334d9348702093daa41aa1065614614ebe9230c96b6650bce0b83d.png" title=" And he navigates to the Demo Contact Form" width="1366"/>
+                <img src="90e45bdc2c334d9348702093daa41aa1065614614ebe9230c96b6650bce0b83d.png" title=" Mickey clicks on Boton para ir a la seccion de formularios" width="1366"/>
+                <img src="caab6b26af8a6788c1522d43d266a74c7a25da3e0e782eb6092a826aeed43f57.png" title=" Mickey clicks on Boton para ir a la seccion de formularios" width="1366"/>
+                <img src="caab6b26af8a6788c1522d43d266a74c7a25da3e0e782eb6092a826aeed43f57.png" title=" Mickey clicks on Boton para ir a la seccion de formularios (completed)" width="1366"/>
+                <img src="caab6b26af8a6788c1522d43d266a74c7a25da3e0e782eb6092a826aeed43f57.png" title=" And he navigates to the Demo Contact Form (completed)" width="1366"/>
+                <img src="e6c74ead266007a0fc4d065da4a03a3621cef423f37b673a178cc93441f993d1.png" title=" When he enters the following data
+| item | value |
+| name | Mickey |
+| email | Mickey@mail.com |
+| phone number | 310 987 1234 |
+| type phone | Home Phone |
+| message | Gestionar una prueba de mensaje fallida |
+| question about | The Universe |
+| result message | Error Message |" width="1366"/>
+                <img src="e6c74ead266007a0fc4d065da4a03a3621cef423f37b673a178cc93441f993d1.png" title=" Mickey enter information form aquabot" width="1366"/>
+                <img src="d5ef2ad18b6122ad749dd95e3407e7b2e0b0380d787f8c430468697197d21a02.png" title=" Mickey enters 'Mickey' into Campo para ingresar el nombre del usuario" width="1366"/>
+                <img src="d04dc1fe6446579c194056f003131a83b8661dd5d618b1da58d1c15a698841ee.png" title=" Mickey enters 'Mickey' into Campo para ingresar el nombre del usuario" width="1366"/>
+                <img src="d04dc1fe6446579c194056f003131a83b8661dd5d618b1da58d1c15a698841ee.png" title=" Mickey enters 'Mickey' into Campo para ingresar el nombre del usuario (completed)" width="1366"/>
+                <img src="d04dc1fe6446579c194056f003131a83b8661dd5d618b1da58d1c15a698841ee.png" title=" Mickey enters 'Mickey@mail.com' into Campo para ingresar el correo electronico del usuario" width="1366"/>
+                <img src="64990f1866b982ef83c457a26ec8623fc6b53788b8a2c13b6b5a1313247e2bea.png" title=" Mickey enters 'Mickey@mail.com' into Campo para ingresar el correo electronico del usuario" width="1366"/>
+                <img src="64990f1866b982ef83c457a26ec8623fc6b53788b8a2c13b6b5a1313247e2bea.png" title=" Mickey enters 'Mickey@mail.com' into Campo para ingresar el correo electronico del usuario (completed)" width="1366"/>
+                <img src="64990f1866b982ef83c457a26ec8623fc6b53788b8a2c13b6b5a1313247e2bea.png" title=" Mickey enters '310 987 1234' into Campo para ingresar el numero telefonico del usuario" width="1366"/>
+                <img src="4a3d7d529dc2a261fd8eead4f735703cc62a5ffe33668ed54e379a680b67fade.png" title=" Mickey enters '310 987 1234' into Campo para ingresar el numero telefonico del usuario" width="1366"/>
+                <img src="4a3d7d529dc2a261fd8eead4f735703cc62a5ffe33668ed54e379a680b67fade.png" title=" Mickey enters '310 987 1234' into Campo para ingresar el numero telefonico del usuario (completed)" width="1366"/>
+                <img src="4a3d7d529dc2a261fd8eead4f735703cc62a5ffe33668ed54e379a680b67fade.png" title=" Mickey clicks on Casilla para marcar el tipo de telefono del cliente" width="1366"/>
+                <img src="89a527514218d2ad6e2c6c9957e0ffe6ac4ad0a8137d4f9a90706269884e1da0.png" title=" Mickey clicks on Casilla para marcar el tipo de telefono del cliente" width="1366"/>
+                <img src="89a527514218d2ad6e2c6c9957e0ffe6ac4ad0a8137d4f9a90706269884e1da0.png" title=" Mickey clicks on Casilla para marcar el tipo de telefono del cliente (completed)" width="1366"/>
+                <img src="7e117d8349afb9ba85f5dfe60a2c93965fef464fe0baa357071868763662837c.png" title=" Mickey enters 'Gestionar una prueba de mensaje fallida' into Temas sobre la pregunta en el mensaje" width="1366"/>
+                <img src="fbe4299ebc648e206c0aadc233a14b81b57538d32905ddcde56477d4554761f5.png" title=" Mickey enters 'Gestionar una prueba de mensaje fallida' into Temas sobre la pregunta en el mensaje" width="1366"/>
+                <img src="fbe4299ebc648e206c0aadc233a14b81b57538d32905ddcde56477d4554761f5.png" title=" Mickey enters 'Gestionar una prueba de mensaje fallida' into Temas sobre la pregunta en el mensaje (completed)" width="1366"/>
+                <img src="fbe4299ebc648e206c0aadc233a14b81b57538d32905ddcde56477d4554761f5.png" title=" Mickey selects The Universe on Temas sobre la pregunta en el mensaje" width="1366"/>
+                <img src="e31629c372a5c44c106e84d7aa24176beda5ba7a8b08b262d6aca7713e120245.png" title=" Mickey selects The Universe on Temas sobre la pregunta en el mensaje" width="1366"/>
+                <img src="e31629c372a5c44c106e84d7aa24176beda5ba7a8b08b262d6aca7713e120245.png" title=" Mickey selects The Universe on Temas sobre la pregunta en el mensaje (completed)" width="1366"/>
+                <img src="881f5d5686d3d395a08a008288e32de2613b40f0b3c73980c6cda3fe6a20db3f.png" title=" Mickey clicks on Casilla para simular un mensaje de exito o error" width="1366"/>
+                <img src="89542dc56f6e81782c1d985ac185585afea60df82333574fe44b8a4447f649b1.png" title=" Mickey clicks on Casilla para simular un mensaje de exito o error" width="1366"/>
+                <img src="89542dc56f6e81782c1d985ac185585afea60df82333574fe44b8a4447f649b1.png" title=" Mickey clicks on Casilla para simular un mensaje de exito o error (completed)" width="1366"/>
+                <img src="89542dc56f6e81782c1d985ac185585afea60df82333574fe44b8a4447f649b1.png" title=" Mickey clicks on Casilla para simular un mensaje de exito" width="1366"/>
+                <img src="2c6fdba5dfb231e567b5bbe4021a42093e2bea377b7bc76f8ef1e0987b468691.png" title=" Mickey clicks on Casilla para simular un mensaje de exito" width="1366"/>
+                <img src="2c6fdba5dfb231e567b5bbe4021a42093e2bea377b7bc76f8ef1e0987b468691.png" title=" Mickey clicks on Casilla para simular un mensaje de exito (completed)" width="1366"/>
+                <img src="6f352711dd95b40d109a2da23fa6bbbe634ceeace9dc1d60177fd4efbe360c19.png" title=" Mickey enter information form aquabot (completed)" width="1366"/>
+                <img src="6f352711dd95b40d109a2da23fa6bbbe634ceeace9dc1d60177fd4efbe360c19.png" title=" When he enters the following data
+| item | value |
+| name | Mickey |
+| email | Mickey@mail.com |
+| phone number | 310 987 1234 |
+| type phone | Home Phone |
+| message | Gestionar una prueba de mensaje fallida |
+| question about | The Universe |
+| result message | Error Message | (completed)" width="1366"/>
+                <img src="6f352711dd95b40d109a2da23fa6bbbe634ceeace9dc1d60177fd4efbe360c19.png" title=" Then Mickey should see the &quot;error message failed&quot;" width="1366"/>
+                <img src="6f352711dd95b40d109a2da23fa6bbbe634ceeace9dc1d60177fd4efbe360c19.png" title=" Then text of Mensaje obtenido cuando se envia el formulario con errores should be a string containing 'error message failed' ignoring case" width="1366"/>
+                <img src="6f352711dd95b40d109a2da23fa6bbbe634ceeace9dc1d60177fd4efbe360c19.png" title=" Then Mickey should see the &quot;error message failed&quot; (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.1.1</span>
+</div>
+</body>
+</html>
